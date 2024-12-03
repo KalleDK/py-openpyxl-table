@@ -1,6 +1,6 @@
 [project]
 name = "openpyxl-table"
-version = "1.2.0.3"
+version = "1.2.0.4"
 description = "Table wrapper for openpyxl"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -17,6 +17,10 @@ classifiers = [
 dependencies = [
     "openpyxl>=3.1.5",
 ]
+
+[project.urls]
+"Source" = "https://github.com/KalleDK/py-openpyxl-table/"
+
 
 [dependency-groups]
 test = [
