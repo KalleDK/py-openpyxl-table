@@ -21,3 +21,8 @@ tasks:
       PART: '{{.CLI_ARGS | default "build"}}'
     cmds:
       - uv run bump-my-version bump {{ .PART }}
+
+  devrel:
+    deps: [bump]
+    cmds:
+      - git push --follow-tags
