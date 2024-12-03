@@ -10,7 +10,7 @@ jobs:
   pypi-publish:
     name: upload release to PyPI
     runs-on: ubuntu-latest
-    environment: PyPi
+    environment: pypi
     permissions:
       id-token: write
     steps:
@@ -29,4 +29,5 @@ jobs:
 
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-
+        with:
+          repository-url: https://test.pypi.org/legacy/
