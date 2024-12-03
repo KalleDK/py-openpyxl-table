@@ -1,0 +1,9 @@
+_commit: v1.0.2
+_src_path: https://github.com/KalleDK/copier-python.git
+email: git@k-moeller.dk
+full_name: Kalle M. Aagaard
+module_slug: openpyxl_table
+project_description: Table wrapper for openpyxl
+project_name: OpenPyxl Table
+python_version: '3.12'
+use_defaults: true

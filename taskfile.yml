@@ -1,0 +1,23 @@
+version: '3'
+
+tasks:
+  test:
+    cmds:
+      - uv run pytest -v
+  lint:
+    cmds:
+      - uv run ruff check
+  format:
+    cmds:
+      - uv run ruff format
+  precommit:
+    cmds:
+      - uv run pre-commit run --all-files
+  install-precommit:
+    cmds:
+      - uv run pre-commit install
+  bump:
+    vars:
+      PART: '{{.CLI_ARGS | default "build"}}'
+    cmds:
+      - uv run bump-my-version bump {{ .PART }}
