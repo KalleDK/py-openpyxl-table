@@ -1,7 +1,7 @@
 # OpenPyxl Table
 ```python
 
-
+from openpyxl_table import DictWriter
 from openpyxl import Workbook
 wb = Workbook()
 
