@@ -19,7 +19,7 @@ dependencies = [
 
 [dependency-groups]
 test = [
-    "pytest>=8.3.3",
+    "pytest>=8.4.2",
 ]
 stubs = []
 
