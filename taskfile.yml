@@ -1,6 +1,10 @@
 version: '3'
 
 tasks:
+  update_skel:
+    cmds:
+      - copier update --trust --defaults
+      - git --no-pager diff
   test:
     cmds:
       - uv run pytest -v
