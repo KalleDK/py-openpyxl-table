@@ -24,7 +24,7 @@ tasks:
       - uv sync -U --group test
   bump:
     vars:
-      PART: '{{.CLI_ARGS | default "build"}}'
+      PART: '{{ .PART | default "build"}}'
     cmds:
       - uv run bump-my-version bump {{ .PART }}
       - task: sync
