@@ -16,13 +16,22 @@ tasks:
   install-precommit:
     cmds:
       - uv run pre-commit install
+  sync:
+    cmds:
+      - uv sync --group test
+  update:
+    cmds:
+      - uv sync -U --group test
   bump:
     vars:
       PART: '{{.CLI_ARGS | default "build"}}'
     cmds:
       - uv run bump-my-version bump {{ .PART }}
+      - task: sync
 
   devrel:
-    deps: [bump]
     cmds:
+      - git add .
+      - if git commit --dry-run --short; then git commit -m "devrel"; else echo nothing changed; fi
+      - task: bump
       - git push --follow-tags

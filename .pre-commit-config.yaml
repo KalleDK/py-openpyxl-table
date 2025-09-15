@@ -1,14 +1,18 @@
 repos:
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.8.0
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.8.17
     hooks:
-      - id: ruff
-        args: [".", "--fix", "--exit-non-zero-on-fix", "--diff", "--show-files"]
+      - id: uv-lock
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.13.0
+    hooks:
+      - id: ruff-check
+        args: [ --fix ]
       - id: ruff-format
-        args: ["."]
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
     -   id: check-illegal-windows-names
     -   id: check-toml
