@@ -22,7 +22,7 @@ wheels = [
 
 [[package]]
 name = "openpyxl-table"
-version = "1.2.2"
+version = "1.2.2.1"
 source = { editable = "." }
 
 [package.dev-dependencies]
