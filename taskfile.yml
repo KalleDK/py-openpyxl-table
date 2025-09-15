@@ -4,6 +4,12 @@ tasks:
   test:
     cmds:
       - uv run pytest -v
+  sync:
+    cmds:
+      - uv sync --group test --group stubs
+  update:
+    cmds:
+      - uv sync -U --group test --group stubs
   lint:
     cmds:
       - uv run ruff check
@@ -18,7 +24,7 @@ tasks:
       - uv run pre-commit install
   bump:
     vars:
-      PART: '{{.CLI_ARGS | default "build"}}'
+      PART: '{{.PART | default "build"}}'
     cmds:
       - uv run bump-my-version bump {{ .PART }}
   devrel:
