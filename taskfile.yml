@@ -28,10 +28,17 @@ tasks:
     cmds:
       - uv run bump-my-version bump {{ .PART }}
       - task: sync
-
+  push:
+    cmds:
+      - git push --follow-tags
   devrel:
     cmds:
       - git add .
       - if git commit --dry-run --short; then git commit -m "devrel"; else echo nothing changed; fi
       - task: bump
-      - git push --follow-tags
+      - task: push
+  release:
+    cmds:
+      - task: bump
+        vars: { PART: patch }
+      - task: push
