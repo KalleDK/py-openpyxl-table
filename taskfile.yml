@@ -33,3 +33,9 @@ tasks:
       - if git commit --dry-run --short; then git commit -m "devrel"; else echo nothing changed; fi
       - task: bump
       - git push --follow-tags
+  release:
+    cmds:
+      - task: bump
+        vars:
+          PART: 'patch'
+      - git push --follow-tags
