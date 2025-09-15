@@ -8,7 +8,11 @@
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": "always"
+            "source.organizeImports.ruff": "always"
         }
+    },
+    "ruff.configuration": "pyproject.toml",
+    "files.exclude": {
+        "**/.*_cache": true
     }
 }
