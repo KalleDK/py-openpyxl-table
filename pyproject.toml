@@ -17,6 +17,11 @@ classifiers = [
 dependencies = [
 ]
 
+[project.urls]
+Homepage = "https://github.com/KalleDK/py-openpyxl-table"
+Documentation = "https://github.com/KalleDK/py-openpyxl-table"
+Repository = "https://github.com/KalleDK/py-openpyxl-table.git"
+
 [dependency-groups]
 test = [
     "pytest>=8.4.2",
