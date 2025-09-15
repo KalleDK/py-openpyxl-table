@@ -1,6 +1,6 @@
 [project]
 name = "openpyxl-table"
-version = "1.2.1"
+version = "0.1.0"
 description = "Table wrapper for openpyxl"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -15,17 +15,13 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
-    "openpyxl>=3.1.5",
 ]
-
-[project.urls]
-"Source" = "https://github.com/KalleDK/py-openpyxl-table/"
-
 
 [dependency-groups]
 test = [
     "pytest>=8.3.3",
 ]
+stubs = []
 
 [build-system]
 requires = ["hatchling"]
@@ -34,9 +30,11 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["src/openpyxl_table"]
 
-
 [tool.pyright]
-include = ["src", "tests"]
-exclude = ["**/__pycache__"]
+include = ["src", "tests", "examples"]
 typeCheckingMode = "strict"
+exclude = ["**/__pycache__"]
 pythonVersion = "3.12"
+[tool.ruff]
+line-length = 120
+target-version = "py312"
