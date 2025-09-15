@@ -6,7 +6,7 @@ from openpyxl.utils.cell import column_index_from_string, coordinate_from_string
 from openpyxl.worksheet.table import Table, TableStyleInfo
 from openpyxl.worksheet.worksheet import Worksheet
 
-__version__ = "1.2.3.2"
+__version__ = "1.2.3.3"
 
 
 class CellCord(NamedTuple):
