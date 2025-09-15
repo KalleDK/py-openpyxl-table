@@ -1,6 +1,6 @@
 [project]
 name = "openpyxl-table"
-version = "1.2.5"
+version = "1.2.5.1"
 description = "Table wrapper for openpyxl"
 readme = "README.md"
 requires-python = ">=3.12"
