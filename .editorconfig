@@ -11,12 +11,12 @@ trim_trailing_whitespace = true
 charset = utf-8
 
 # 4 space indentation
-[*.{py, json}]
+[*.{py, json, toml}]
 indent_style = space
 indent_size = 4
 
 # 2 space indentation
-[*.{y{a,}ml,toml}]
+[*.{y{a,}ml}]
 indent_style = space
 indent_size = 2
 
