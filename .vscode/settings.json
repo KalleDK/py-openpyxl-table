@@ -11,8 +11,8 @@
             "source.organizeImports.ruff": "always"
         }
     },
-    "ruff.configuration": "pyproject.toml",
     "files.exclude": {
         "**/.*_cache": true
-    }
+    },
+    "ruff.configuration": "pyproject.toml"
 }
