@@ -30,6 +30,9 @@ test = [
 stubs = [
     "types-openpyxl>=3.1.5.20250914",
 ]
+dev = [
+    "ruff>=0.15.22",
+]
 
 [build-system]
 requires = ["hatchling"]
